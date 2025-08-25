@@ -1,0 +1,16 @@
+# Ambientes virtuais
+venv/
+.env/
+.venv/
+.env
+
+# Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Configurações locais
+*.sqlite3
+*.db
