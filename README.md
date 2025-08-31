@@ -2,8 +2,10 @@
 
 A FastAPI-based WhatsApp assistant that provides empathetic, Christian-inspired responses to text and audio messages using OpenAI's GPT and Whisper models. The bot can reply with both text and audio, always including a Bible verse in its responses.
 
-<img src="./assets/whatsapp1.jpg" alt="whastapp1" width="200"/>
-<img src="./assets/whatsapp2.jpg" alt="whastapp1" width="200"/>
+<div style="display: flex; gap: 10px;">
+  <img src="./assets/whatsapp1.jpg" alt="whatsapp1" width="200"/>
+  <img src="./assets/whatsapp2.jpg" alt="whatsapp2" width="200"/>
+</div>
 
 
 ## Features
