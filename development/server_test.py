@@ -9,7 +9,7 @@ VERIFY_TOKEN  = 'christian-token-123'
 async def webhook_test(request: Request):
     """Webhook de teste sem enviar pro WhatsApp"""
     data = await request.json()
-    respostas = []
+    response = []
 
     try:
         messages = data.get("entry", [])[0].get("changes", [])[0].get("value", {}).get("messages", [])
@@ -20,12 +20,12 @@ async def webhook_test(request: Request):
             print(f"Mensagem recebida de {user_number}: {user_text}")
             resposta = ai_answer(user_text)
             print(f"Resposta gerada: {resposta}\n")
-            respostas.append({"from": user_number, "resposta": resposta})
+            response.append({"from": user_number, "resposta": resposta})
 
     except Exception as e:
         print("Erro no webhook de teste:", e)
 
-    return {"status": "received", "respostas": respostas}
+    return {"status": "received", "respostas": response}
 
 # --- Webhook Verification (GET) ---
 @app.get("/webhook")
